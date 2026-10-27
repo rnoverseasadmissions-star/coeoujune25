@@ -1,0 +1,267 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This site can't be reached</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+    background: #202124;
+    color: #e8eaed;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
+}
+
+/* Top browser-style toolbar */
+.toolbar {
+    height: 94px;
+    flex-shrink: 0;
+    background: #111318;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    gap: 22px;
+}
+
+.home {
+    width: 36px;
+    flex-shrink: 0;
+}
+
+.address {
+    height: 70px;
+    flex: 1;
+    min-width: 0;
+    border-radius: 40px;
+    background: #30333b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 11px;
+    font-size: 30px;
+    color: #e8eaed;
+    white-space: nowrap;
+}
+
+.info {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border: 3px solid #d9dce2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.sparkle {
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.tabs {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: 3px solid #d9dce2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.menu {
+    font-size: 30px;
+    margin-left: 12px;
+}
+
+/* Error page content */
+main {
+    flex: 1;
+    padding: 195px 42px 20px;
+}
+
+.file-icon {
+    width: 64px;
+    height: 78px;
+    display: block;
+    margin-bottom: 96px;
+    color: #aeb2b7;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    color: #aeb2b7;
+    margin: 0 0 31px;
+}
+
+.message {
+    font-size: 25px;
+    line-height: 1.4;
+    color: #aeb2b7;
+    margin: 0 0 31px;
+}
+
+.error-code {
+    font-size: 20px;
+    color: #9aa0a6;
+}
+
+/* Reload button */
+.reload {
+    height: 85px;
+    flex-shrink: 0;
+    margin: 0 42px 15px;
+    border: none;
+    border-radius: 40px;
+    background: #8ab4f8;
+    color: #202124;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Adapt layout to smaller phones */
+@media (max-width: 480px) {
+    .toolbar {
+        gap: 12px;
+        padding: 0 14px;
+    }
+
+    .address {
+        font-size: 20px;
+    }
+
+    .sparkle {
+        width: 28px;
+    }
+
+    .menu {
+        margin-left: 2px;
+    }
+
+    main {
+        padding: 155px 28px 20px;
+    }
+
+    .file-icon {
+        margin-bottom: 75px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .message {
+        font-size: 19px;
+    }
+
+    .error-code {
+        font-size: 15px;
+    }
+
+    .reload {
+        margin: 0 28px 15px;
+        height: 65px;
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="toolbar">
+
+    <!-- Home icon -->
+    <svg class="home" viewBox="0 0 40 40">
+        <path d="M4 18 L20 5 L36 18 M9 16 V34 H31 V16"
+              fill="none"
+              stroke="#e8eaed"
+              stroke-width="3.5"
+              stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Address bar replica -->
+    <div class="address">
+        <span class="info">i</span>
+        <span>coeoujune23</span>
+    </div>
+
+    <!-- Sparkle icon -->
+    <svg class="sparkle" viewBox="0 0 48 48">
+        <path d="M24 1 C27 13 34 20 47 24
+                 C34 28 27 35 24 47
+                 C21 35 14 28 1 24
+                 C14 20 21 13 24 1Z"
+              fill="#e8eaed"/>
+    </svg>
+
+    <!-- Tab counter -->
+    <div class="tabs">2</div>
+
+    <!-- Menu -->
+    <div class="menu">⋮</div>
+
+</header>
+
+<main>
+
+    <!-- Broken document icon -->
+    <svg class="file-icon" viewBox="0 0 64 78" fill="none">
+        <path d="M4 3H43L60 20V74H4V3Z"
+              stroke="currentColor"
+              stroke-width="6"/>
+        <path d="M43 4V20H59"
+              stroke="currentColor"
+              stroke-width="6"/>
+        <path d="M20 3V28H39"
+              stroke="currentColor"
+              stroke-width="6"/>
+        <path d="M19 53H39V61H19Z"
+              fill="currentColor"/>
+        <path d="M19 61H25V67H19Z"
+              fill="currentColor"/>
+    </svg>
+
+    <h1>This site can’t be reached</h1>
+
+    <p class="message">
+        Check if there is a typo in coeoujune23.
+    </p>
+
+    <div class="error-code">
+        DNS_PROBE_FINISHED_NXDOMAIN
+    </div>
+
+</main>
+
+<button class="reload" onclick="location.reload()">
+    Reload
+</button>
+
+</body>
+</html>
+```
